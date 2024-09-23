@@ -40,9 +40,16 @@
 					</div>
 				</div>
 			</nav>
-			<div class="px-2 py-6 text-center space-x-4">
-				<button class="btn px-6 bg-lime-400">Donate</button>
-				<button class="btn px-6">History</button>
+			<div id="menus" class="px-2 py-6 text-center space-x-4">
+				<button id="donate-btn" class="btn px-8 bg-lime-400 menu-btn">
+					Donate
+				</button>
+				<button
+					id="history-btn"
+					class="btn btn-outline border-2 border-gray-200 px-8 menu-btn"
+				>
+					History
+				</button>
 			</div>
 		</header>
 
@@ -232,6 +239,9 @@
 							</div>
 						</div>
 					</div>
+				</div>
+				<div id="donation-history" class="hidden min-h-screen">
+					History
 				</div>
 			</section>
 		</main>

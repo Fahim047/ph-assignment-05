@@ -1,6 +1,20 @@
 const accountBalance = document.getElementById('account-balance');
 const donateNowButtons = document.querySelectorAll('.donate-now-btn');
 const dialog = document.getElementById('my_modal_1');
+const menus = document.querySelectorAll('.menu-btn');
+const donateBtn = document.getElementById('donate-btn');
+const historyBtn = document.getElementById('history-btn');
+const donationEvents = document.getElementById('donation-events');
+const donationHistory = document.getElementById('donation-history');
+
+menus.forEach((btn) => {
+	btn.addEventListener('click', (event) => {
+		const clickedBtn = event.target;
+		const otherBtn = btn.id === 'donate-btn' ? historyBtn : donateBtn;
+
+		toggleButtonAndSection(clickedBtn, otherBtn);
+	});
+});
 
 donateNowButtons.forEach((btn) => {
 	btn.addEventListener('click', donateNow);
@@ -52,4 +66,20 @@ function donateNow(event) {
 
 	dialog.showModal();
 	inputField.value = '';
+}
+
+function toggleButtonAndSection(clickedBtn, otherBtn) {
+	clickedBtn.classList.add('bg-lime-400');
+	clickedBtn.classList.remove('btn-outline', 'border-2', 'border-gray-200');
+
+	otherBtn.classList.add('btn-outline', 'border-2', 'border-gray-200');
+	otherBtn.classList.remove('bg-lime-400');
+
+	if (clickedBtn.id === 'donate-btn') {
+		donationEvents.classList.remove('hidden');
+		donationHistory.classList.add('hidden');
+	} else {
+		donationHistory.classList.remove('hidden');
+		donationEvents.classList.add('hidden');
+	}
 }
