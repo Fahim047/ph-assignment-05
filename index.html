@@ -32,15 +32,190 @@
 					</div>
 					<div class="flex items-center gap-2">
 						<img src="./assets/coin.png" alt="coin" />
-						<span class="font-bold text-gray-500">5500</span>
+						<span
+							id="account-balance"
+							class="font-bold text-gray-500"
+							>5500</span
+						>
 					</div>
 				</div>
 			</nav>
-			<div class="py-6 text-center space-x-4">
+			<div class="px-2 py-6 text-center space-x-4">
 				<button class="btn px-6 bg-lime-400">Donate</button>
 				<button class="btn px-6">History</button>
 			</div>
 		</header>
+
+		<main class="mt-8 px-2">
+			<section class="max-w-6xl mx-auto">
+				<div id="donation-events" class="space-y-6">
+					<div
+						class="card lg:card-side z-0 border-2 gap-8 border-gray-200 p-6"
+					>
+						<figure class="flex-1">
+							<img
+								class="max-h-[350px] object-cover rounded-xl"
+								src="./assets/noakhali.png"
+								alt="Album"
+							/>
+						</figure>
+						<div class="flex-1 flex flex-col justify-between gap-6">
+							<div class="space-y-4">
+								<div
+									class="w-fit mb-4 flex items-center justify-center rounded-md p-2 gap-2 bg-gray-100"
+								>
+									<img
+										class="w-6"
+										src="./assets/coin.png"
+										alt="coin"
+									/>
+									<span
+										class="total-fund font-bold text-gray-500"
+										>0 BDT</span
+									>
+								</div>
+								<h2 class="card-title font-bold text-black">
+									Donate for Flood Affected People
+								</h2>
+								<p class="text-gray-500">
+									The recent floods in Noakhali, Feni,
+									Kurigram have caused significant damage to
+									homes infrastructure. Your donation will
+									help to provide essential supplies to the
+									affected people. Every contribution, big or
+									small, makes difference. Let&apos;s show
+									kindness.
+								</p>
+							</div>
+							<div class="space-y-4">
+								<input
+									id="flood-donation-input"
+									type="text"
+									placeholder="Enter Donation Amount"
+									class="input input-bordered w-full donation-input"
+								/>
+								<div class="card-actions">
+									<button
+										class="donate-now-btn btn w-full bg-lime-400 hover:bg-transparent hover:border-lime-400 font-bold text-xl text-black"
+									>
+										Donate Now
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div
+						class="card lg:card-side z-0 border-2 gap-8 border-gray-200 p-6"
+					>
+						<figure class="flex-1">
+							<img
+								class="max-h-[350px] object-cover rounded-xl"
+								src="./assets/abu-sayed.webp"
+								alt="Album"
+							/>
+						</figure>
+						<div class="flex-1 flex flex-col justify-between gap-6">
+							<div class="space-y-4">
+								<div
+									class="w-fit mb-4 flex items-center justify-center rounded-md p-2 gap-2 bg-gray-100"
+								>
+									<img
+										class="w-6"
+										src="./assets/coin.png"
+										alt="coin"
+									/>
+									<span
+										class="total-fund font-bold text-gray-500"
+										>0 BDT</span
+									>
+								</div>
+								<h2 class="card-title font-bold text-black">
+									Donate for Injured people of The Student
+									Movement
+								</h2>
+								<p class="text-gray-500">
+									Donate for the injured and martyred people
+									of the student movement 2024.
+								</p>
+							</div>
+							<div class="space-y-4">
+								<input
+									type="text"
+									placeholder="Enter Donation Amount"
+									class="input input-bordered w-full donation-input"
+								/>
+								<div class="card-actions">
+									<button
+										class="donate-now-btn btn w-full bg-lime-400 hover:bg-transparent hover:border-lime-400 font-bold text-xl text-black"
+									>
+										Donate Now
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div
+						class="card lg:card-side z-0 border-2 gap-8 border-gray-200 p-6"
+					>
+						<figure class="flex-1">
+							<img
+								class="max-w-[550px] h-full rounded-xl"
+								src="./assets/palestine.jpg"
+								alt="Album"
+							/>
+						</figure>
+						<div class="flex-1 flex flex-col justify-between gap-6">
+							<div class="space-y-4">
+								<div
+									class="w-fit mb-4 flex items-center justify-center rounded-md p-2 gap-2 bg-gray-100"
+								>
+									<img
+										class="w-6"
+										src="./assets/coin.png"
+										alt="coin"
+									/>
+									<span
+										class="total-fund font-bold text-gray-500"
+										>0 BDT</span
+									>
+								</div>
+								<h2 class="card-title font-bold text-black">
+									Donate for Palestine
+								</h2>
+								<p class="text-gray-500">
+									Palestine is in crisis, and many families
+									need urgent help with food, water, medicine,
+									and shelter. Your donation, no matter how
+									small, can bring hope and relief to those
+									suffering. Please consider donating today
+									and share this message with others.
+									Let&apos;s show kindness and stand with
+									those going through difficult times. Every
+									bit of help makes a big difference. Thank
+									you for your kindness.
+								</p>
+							</div>
+							<div class="space-y-4">
+								<input
+									id="noakhali-donation-input"
+									type="text"
+									placeholder="Enter Donation Amount"
+									class="input input-bordered w-full donation-input"
+								/>
+								<div class="card-actions">
+									<button
+										class="donate-now-btn btn w-full bg-lime-400 hover:bg-transparent hover:border-lime-400 font-bold text-xl text-black"
+									>
+										Donate Now
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
 		<script src="./scripts/index.js"></script>
 	</body>
 </html>
