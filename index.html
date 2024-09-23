@@ -47,6 +47,26 @@
 		</header>
 
 		<main class="mt-8 px-2">
+			<!-- Open the modal using ID.showModal() method -->
+			<dialog id="my_modal_1" class="modal backdrop:blur-md">
+				<div class="modal-box flex flex-col items-center gap-4">
+					<h3 class="text-3xl text-center font-bold">
+						Successful! ✅
+					</h3>
+					<div>
+						<img src="./assets/coin.png" alt="coin" />
+					</div>
+					<p class="py-4 font-medium text-xl">
+						Thank you for your donation ❤️
+					</p>
+					<div class="modal-action">
+						<form method="dialog">
+							<!-- if there is a button in form, it will close the modal -->
+							<button class="btn hover:btn-error">Close</button>
+						</form>
+					</div>
+				</div>
+			</dialog>
 			<section class="max-w-6xl mx-auto">
 				<div id="donation-events" class="space-y-6">
 					<div
@@ -96,7 +116,7 @@
 								/>
 								<div class="card-actions">
 									<button
-										class="donate-now-btn btn w-full bg-lime-400 hover:bg-transparent hover:border-lime-400 font-bold text-xl text-black"
+										class="donate-now-btn btn w-full bg-lime-400 hover:bg-transparent hover:border-lime-400 font-bold text-lg text-black"
 									>
 										Donate Now
 									</button>
@@ -146,7 +166,7 @@
 								/>
 								<div class="card-actions">
 									<button
-										class="donate-now-btn btn w-full bg-lime-400 hover:bg-transparent hover:border-lime-400 font-bold text-xl text-black"
+										class="donate-now-btn btn w-full bg-lime-400 hover:bg-transparent hover:border-lime-400 font-bold text-lg text-black"
 									>
 										Donate Now
 									</button>
@@ -204,7 +224,7 @@
 								/>
 								<div class="card-actions">
 									<button
-										class="donate-now-btn btn w-full bg-lime-400 hover:bg-transparent hover:border-lime-400 font-bold text-xl text-black"
+										class="donate-now-btn btn w-full bg-lime-400 hover:bg-transparent hover:border-lime-400 font-bold text-lg text-black"
 									>
 										Donate Now
 									</button>
