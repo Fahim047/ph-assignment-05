@@ -49,11 +49,12 @@ function donateNow(event) {
 		return;
 	}
 
+	const donationEventName = card.querySelector('.card-title').innerText;
 	const donationAmount = parseFloat(inputField.value);
-	const currentBalance =
+	const remainingBalance =
 		parseFloat(accountBalance.innerText) - donationAmount;
 
-	if (currentBalance < 0) {
+	if (remainingBalance < 0) {
 		alert('Insufficient balance!');
 		inputField.value = '';
 		return;
@@ -62,8 +63,9 @@ function donateNow(event) {
 	let totalFund = parseFloat(card.querySelector('.total-fund').innerText);
 	totalFund += donationAmount;
 	card.querySelector('.total-fund').innerText = totalFund + ' BDT';
-	accountBalance.innerText = currentBalance + ' BDT';
+	accountBalance.innerText = remainingBalance + ' BDT';
 
+	createTransactionHistory(donationAmount, donationEventName);
 	dialog.showModal();
 	inputField.value = '';
 }
@@ -82,4 +84,21 @@ function toggleButtonAndSection(clickedBtn, otherBtn) {
 		donationHistory.classList.remove('hidden');
 		donationEvents.classList.add('hidden');
 	}
+}
+
+function createTransactionHistory(donationAmount, donationEventName) {
+	const newDate = new Date();
+	const newDonation = document.createElement('div');
+	newDonation.classList.add(
+		'p-6',
+		'border-2',
+		'border-gray-200',
+		'rounded-xl'
+	);
+	newDonation.innerHTML = `
+		<h2 class="font-bold text-xl mb-4">${donationAmount} Taka is donated at "${donationEventName}"</h2>
+		<p class="text-gray-500">Date: ${newDate}</p>
+		`;
+
+	donationHistory.prepend(newDonation);
 }
