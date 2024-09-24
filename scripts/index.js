@@ -50,7 +50,8 @@ function donateNow(event) {
 	}
 
 	const donationEventName = card.querySelector('.card-title').innerText;
-	const donationAmount = parseFloat(inputField.value);
+	let donationAmount = parseFloat(inputField.value);
+	donationAmount = parseFloat(donationAmount.toFixed(2));
 	const remainingBalance =
 		parseFloat(accountBalance.innerText) - donationAmount;
 
@@ -62,8 +63,8 @@ function donateNow(event) {
 
 	let totalFund = parseFloat(card.querySelector('.total-fund').innerText);
 	totalFund += donationAmount;
-	card.querySelector('.total-fund').innerText = totalFund + ' BDT';
-	accountBalance.innerText = remainingBalance + ' BDT';
+	card.querySelector('.total-fund').innerText = totalFund.toFixed(2) + ' BDT';
+	accountBalance.innerText = remainingBalance.toFixed(2) + ' BDT';
 
 	createTransactionHistory(donationAmount, donationEventName);
 	dialog.showModal();
