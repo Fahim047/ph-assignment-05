@@ -21,7 +21,8 @@ donateNowButtons.forEach((btn) => {
 });
 
 function validateInput(value) {
-	if (value === '' || value === '0') return false;
+	if (value === '') return false;
+	if (parseFloat(value) === 0) return false;
 	let decimalCount = 0;
 
 	for (let char of value) {
